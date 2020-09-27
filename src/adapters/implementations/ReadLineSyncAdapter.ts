@@ -2,11 +2,11 @@ import { Interaction } from "../Interaction";
 import readlineSync from 'readline-sync'
 
 export class ReadLineSyncAdapter implements Interaction {
-    question(text: string): string {
-        return readlineSync.question(text)
+    question(text: string): Promise<string> {
+        return Promise.resolve(readlineSync.question(text))
     }
 
-    questionYesOrNo(text: string): string | boolean {
-        return readlineSync.keyInYN(text)
+    questionYesOrNo(text: string): Promise<string | boolean> {
+        return Promise.resolve(readlineSync.keyInYN(text))
     }
 }

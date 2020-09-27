@@ -8,12 +8,12 @@ export class CreateScheduleUseCase implements CreateSchedule {
         private readonly interaction: Interaction
     ) {}
 
-    create(): Schedule {
-        const name = this.interaction.question('Digite o nome do agendamento: ')
-        const date = this.interaction.question('Digite a data: ')
-        const hour = this.interaction.question('Digite a hora: ')
-        const sendEmail = this.interaction.questionYesOrNo('Deseja enviar uma notificação por email? ')
-        const email = sendEmail ? this.interaction.question('Digite o email: ') : ''
+    async create(): Promise<Schedule> {
+        const name = await this.interaction.question('Digite o nome do agendamento: ')
+        const date = await this.interaction.question('Digite a data: ')
+        const hour = await this.interaction.question('Digite a hora: ')
+        const sendEmail = await this.interaction.questionYesOrNo('Deseja enviar uma notificação por email? ')
+        const email = sendEmail ? await this.interaction.question('Digite o email: ') : ''
         
         const schedule = { name, date, hour, email }
         

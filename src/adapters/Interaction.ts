@@ -1,4 +1,4 @@
 export interface Interaction {
-    question(text: string): string
-    questionYesOrNo(text: string): string | boolean
+    question(text: string): Promise<string>
+    questionYesOrNo(text: string): Promise<string | boolean>
 }

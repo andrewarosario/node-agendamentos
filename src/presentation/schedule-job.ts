@@ -7,8 +7,8 @@ export class ScheduleJob {
         private readonly createJob: CreateJob,
     ) {}
 
-    create() {
-        const schedule = this.createSchedule.create()
+    async create() {
+        const schedule = await this.createSchedule.create()
         this.createJob.create(schedule)
     }
 }
