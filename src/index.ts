@@ -1,4 +1,10 @@
 import { createScheduleFactory } from "./main/create-schedule-factory";
+import { createJobFactory } from "./main/create-job-factory";
+import { ScheduleJob } from "./presentation/schedule-job";
 
-const createSchedule = createScheduleFactory()
-createSchedule.create()
+const scheduleJob = new ScheduleJob(
+    createScheduleFactory(),
+    createJobFactory()
+)
+
+scheduleJob.create()
