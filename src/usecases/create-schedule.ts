@@ -1,4 +1,4 @@
-import { Interaction } from "../providers/Interaction";
+import { Interaction } from "../adapters/Interaction";
 import { CreateSchedule } from "../domain/create-schedule";
 import { Schedule } from "../domain/models/Schedule";
 

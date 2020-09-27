@@ -1,7 +1,7 @@
 import { Interaction } from "../Interaction";
 import readlineSync from 'readline-sync'
 
-export class ReadLineSyncProvider implements Interaction {
+export class ReadLineSyncAdapter implements Interaction {
     question(text: string): string {
         return readlineSync.question(text)
     }
