@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/index.ts"
   },
   "keywords": [],
   "author": "",
