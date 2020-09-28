@@ -1,4 +1,4 @@
-import { Interaction } from "../Interaction";
+import { Interaction } from "../../Interaction";
 import readlineSync from 'readline-sync'
 
 export class ReadLineSyncAdapter implements Interaction {
